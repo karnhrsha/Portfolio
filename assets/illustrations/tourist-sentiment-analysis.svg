@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 720"><style>
+svg > g, svg > path, svg > text {
+  opacity: 0;
+  animation: archiveAppear .75s cubic-bezier(.22,1,.36,1) forwards;
+}
+svg > g:nth-of-type(1), svg > path:nth-of-type(1) { animation-delay: .12s; }
+svg > g:nth-of-type(2), svg > path:nth-of-type(2) { animation-delay: .28s; }
+svg > g:nth-of-type(3), svg > path:nth-of-type(3) { animation-delay: .44s; }
+svg > g:nth-of-type(n+4), svg > path:nth-of-type(n+4), svg > text { animation-delay: .62s; }
+g path, g line, g ellipse, g polyline, g polygon {
+  stroke-dasharray: 1800;
+  stroke-dashoffset: 1800;
+  animation: archiveDraw 2s cubic-bezier(.22,1,.36,1) .14s forwards;
+}
+@keyframes archiveDraw { to { stroke-dashoffset: 0; } }
+@keyframes archiveAppear { to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  svg > g, svg > path, svg > text { opacity: 1; animation: none; }
+  g path, g line, g ellipse, g polyline, g polygon {
+    stroke-dashoffset: 0;
+    animation: none;
+  }
+}
+</style><rect width="1100" height="720" fill="#f4f2ed"/>
+<g fill="none" stroke="#9d9990" stroke-width="1.1" stroke-linecap="round">
+  <path d="M85 500 C210 438 305 390 410 430 C530 475 610 350 725 385 C820 414 875 355 945 310"/>
+  <path d="M100 570 C250 540 345 505 465 528 C590 552 695 475 805 498" opacity=".62"/>
+</g>
+<g fill="#171717"><circle cx="190" cy="452" r="6"/><circle cx="300" cy="400" r="5"/><circle cx="410" cy="430" r="8"/><circle cx="610" cy="350" r="6"/><circle cx="725" cy="385" r="7"/></g>
+<g fill="#6c7b72"><circle cx="250" cy="548" r="5"/><circle cx="520" cy="520" r="7"/><circle cx="805" cy="498" r="6"/></g>
+<g fill="#252420" font-family="Instrument Serif,Georgia" font-size="42">
+  <text x="105" y="165">Many voices.</text><text x="105" y="216">One place.</text>
+</g>
+<path d="M105 252 H285" stroke="#6c7b72" stroke-width="1"/>
+<text x="105" y="300" fill="#77726a" font-family="DM Sans,Arial" font-size="15">Individual memories become</text>
+<text x="105" y="324" fill="#77726a" font-family="DM Sans,Arial" font-size="15">a larger public perception.</text>
+</svg>

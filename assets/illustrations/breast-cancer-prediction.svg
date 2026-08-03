@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 720"><style>
+svg > g, svg > path, svg > text {
+  opacity: 0;
+  animation: archiveAppear .75s cubic-bezier(.22,1,.36,1) forwards;
+}
+svg > g:nth-of-type(1), svg > path:nth-of-type(1) { animation-delay: .12s; }
+svg > g:nth-of-type(2), svg > path:nth-of-type(2) { animation-delay: .28s; }
+svg > g:nth-of-type(3), svg > path:nth-of-type(3) { animation-delay: .44s; }
+svg > g:nth-of-type(n+4), svg > path:nth-of-type(n+4), svg > text { animation-delay: .62s; }
+g path, g line, g ellipse, g polyline, g polygon {
+  stroke-dasharray: 1800;
+  stroke-dashoffset: 1800;
+  animation: archiveDraw 2s cubic-bezier(.22,1,.36,1) .14s forwards;
+}
+@keyframes archiveDraw { to { stroke-dashoffset: 0; } }
+@keyframes archiveAppear { to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  svg > g, svg > path, svg > text { opacity: 1; animation: none; }
+  g path, g line, g ellipse, g polyline, g polygon {
+    stroke-dashoffset: 0;
+    animation: none;
+  }
+}
+</style><rect width="1100" height="720" fill="#f4f2ed"/>
+<g fill="none" stroke="#9d9990" stroke-width="1.1" stroke-linecap="round">
+  <path d="M105 350 H690"/>
+  <circle cx="150" cy="350" r="46"/><circle cx="285" cy="350" r="46"/><circle cx="420" cy="350" r="46"/><circle cx="555" cy="350" r="46"/><circle cx="690" cy="350" r="46"/>
+  <path d="M196 350 H239"/><path d="M331 350 H374"/><path d="M466 350 H509"/><path d="M601 350 H644"/>
+</g>
+<g fill="#171717"><circle cx="150" cy="350" r="7"/><circle cx="285" cy="350" r="7"/><circle cx="420" cy="350" r="7"/><circle cx="555" cy="350" r="7"/><circle cx="690" cy="350" r="7"/></g>
+<g fill="#77726a" font-family="DM Sans,Arial" font-size="13" text-anchor="middle" letter-spacing="1.2">
+  <text x="150" y="430">PATIENT</text><text x="285" y="430">FEATURES</text><text x="420" y="430">MODEL</text><text x="555" y="430">CONFIDENCE</text><text x="690" y="430">DECISION</text>
+</g>
+<g fill="#252420" font-family="Instrument Serif,Georgia" font-size="35">
+  <text x="790" y="270">Predictions support</text><text x="790" y="314">decisions.</text>
+</g>
+<path d="M790 352 H980" stroke="#6c7b72" stroke-width="1"/>
+<text x="790" y="400" fill="#77726a" font-family="DM Sans,Arial" font-size="15">They do not replace</text>
+<text x="790" y="424" fill="#77726a" font-family="DM Sans,Arial" font-size="15">clinical judgment.</text>
+</svg>

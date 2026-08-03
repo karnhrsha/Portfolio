@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 720"><style>
+svg > g, svg > path, svg > text {
+  opacity: 0;
+  animation: archiveAppear .75s cubic-bezier(.22,1,.36,1) forwards;
+}
+svg > g:nth-of-type(1), svg > path:nth-of-type(1) { animation-delay: .12s; }
+svg > g:nth-of-type(2), svg > path:nth-of-type(2) { animation-delay: .28s; }
+svg > g:nth-of-type(3), svg > path:nth-of-type(3) { animation-delay: .44s; }
+svg > g:nth-of-type(n+4), svg > path:nth-of-type(n+4), svg > text { animation-delay: .62s; }
+g path, g line, g ellipse, g polyline, g polygon {
+  stroke-dasharray: 1800;
+  stroke-dashoffset: 1800;
+  animation: archiveDraw 2s cubic-bezier(.22,1,.36,1) .14s forwards;
+}
+@keyframes archiveDraw { to { stroke-dashoffset: 0; } }
+@keyframes archiveAppear { to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  svg > g, svg > path, svg > text { opacity: 1; animation: none; }
+  g path, g line, g ellipse, g polyline, g polygon {
+    stroke-dashoffset: 0;
+    animation: none;
+  }
+}
+</style><rect width="1100" height="720" fill="#ece9e1"/><path d="M100 530 C245 425 320 165 495 205 C650 240 615 455 790 395" fill="none" stroke="#aaa69d" stroke-width="1.2" /><path d="M115 585 C260 505 390 555 525 470 C650 392 690 250 805 210" fill="none" stroke="#aaa69d" stroke-width="1.2" /><path d="M160 270 C275 185 400 170 530 255" fill="none" stroke="#aaa69d" stroke-width="1.2" /><path d="M210 620 C335 550 470 575 615 665" fill="none" stroke="#aaa69d" stroke-width="1.2" /><path d="M115 585 C260 505 390 555 525 470 C650 392 690 250 805 210" fill="none" stroke="#6c7b72" stroke-width="1.2" stroke-dasharray="3 12"/><circle cx="160" cy="270" r="5" fill="#171717"/><circle cx="495" cy="205" r="7" fill="#171717"/><circle cx="790" cy="395" r="5" fill="#171717"/><circle cx="210" cy="620" r="4" fill="#171717"/><circle cx="615" cy="665" r="5" fill="#171717"/><circle cx="115" cy="585" r="7" fill="#6c7b72"/><circle cx="525" cy="470" r="8" fill="#6c7b72"/><circle cx="805" cy="210" r="6" fill="#6c7b72"/><circle cx="495" cy="205" r="25" fill="none" stroke="#171717" opacity=".35"/><circle cx="525" cy="470" r="35" fill="none" stroke="#171717" opacity=".35"/></svg>

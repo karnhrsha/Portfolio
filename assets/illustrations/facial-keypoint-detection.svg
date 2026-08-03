@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 720"><style>
+svg > g, svg > path, svg > text {
+  opacity: 0;
+  animation: archiveAppear .75s cubic-bezier(.22,1,.36,1) forwards;
+}
+svg > g:nth-of-type(1), svg > path:nth-of-type(1) { animation-delay: .12s; }
+svg > g:nth-of-type(2), svg > path:nth-of-type(2) { animation-delay: .28s; }
+svg > g:nth-of-type(3), svg > path:nth-of-type(3) { animation-delay: .44s; }
+svg > g:nth-of-type(n+4), svg > path:nth-of-type(n+4), svg > text { animation-delay: .62s; }
+g path, g line, g ellipse, g polyline, g polygon {
+  stroke-dasharray: 1800;
+  stroke-dashoffset: 1800;
+  animation: archiveDraw 2s cubic-bezier(.22,1,.36,1) .14s forwards;
+}
+@keyframes archiveDraw { to { stroke-dashoffset: 0; } }
+@keyframes archiveAppear { to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  svg > g, svg > path, svg > text { opacity: 1; animation: none; }
+  g path, g line, g ellipse, g polyline, g polygon {
+    stroke-dashoffset: 0;
+    animation: none;
+  }
+}
+</style><rect width="1100" height="720" fill="#f4f2ed"/>
+<g fill="none" stroke="#9d9990" stroke-width="1.1" stroke-linecap="round">
+  <ellipse cx="440" cy="360" rx="185" ry="250"/>
+  <path d="M300 325 Q370 278 430 320"/><path d="M462 320 Q530 278 592 325"/>
+  <path d="M366 494 Q438 530 516 492"/><path d="M440 300 L420 425 L458 432"/>
+</g>
+<g fill="#171717">
+  <circle cx="314" cy="332" r="5"/><circle cx="352" cy="312" r="5"/><circle cx="394" cy="310" r="5"/><circle cx="430" cy="324" r="5"/>
+  <circle cx="466" cy="324" r="5"/><circle cx="508" cy="310" r="5"/><circle cx="550" cy="312" r="5"/><circle cx="588" cy="332" r="5"/>
+  <circle cx="366" cy="494" r="5"/><circle cx="410" cy="512" r="5"/><circle cx="458" cy="513" r="5"/><circle cx="516" cy="492" r="5"/>
+  <circle cx="420" cy="425" r="5"/><circle cx="458" cy="432" r="5"/>
+</g>
+<g fill="#6c7b72" font-family="DM Sans,Arial" font-size="13" letter-spacing="2">
+  <text x="760" y="224">68 LANDMARKS</text>
+</g>
+<g fill="#252420" font-family="Instrument Serif,Georgia" font-size="36">
+  <text x="760" y="296">Observation</text><text x="760" y="340">becomes expression.</text>
+</g>
+<path d="M760 382 H945" stroke="#6c7b72" stroke-width="1"/>
+<text x="760" y="430" fill="#77726a" font-family="DM Sans,Arial" font-size="15">Understanding begins</text>
+<text x="760" y="454" fill="#77726a" font-family="DM Sans,Arial" font-size="15">with small, precise points.</text>
+</svg>

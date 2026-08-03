@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 720"><style>
+svg > g, svg > path, svg > text {
+  opacity: 0;
+  animation: archiveAppear .75s cubic-bezier(.22,1,.36,1) forwards;
+}
+svg > g:nth-of-type(1), svg > path:nth-of-type(1) { animation-delay: .12s; }
+svg > g:nth-of-type(2), svg > path:nth-of-type(2) { animation-delay: .28s; }
+svg > g:nth-of-type(3), svg > path:nth-of-type(3) { animation-delay: .44s; }
+svg > g:nth-of-type(n+4), svg > path:nth-of-type(n+4), svg > text { animation-delay: .62s; }
+g path, g line, g ellipse, g polyline, g polygon {
+  stroke-dasharray: 1800;
+  stroke-dashoffset: 1800;
+  animation: archiveDraw 2s cubic-bezier(.22,1,.36,1) .14s forwards;
+}
+@keyframes archiveDraw { to { stroke-dashoffset: 0; } }
+@keyframes archiveAppear { to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  svg > g, svg > path, svg > text { opacity: 1; animation: none; }
+  g path, g line, g ellipse, g polyline, g polygon {
+    stroke-dashoffset: 0;
+    animation: none;
+  }
+}
+</style><rect width="1100" height="720" fill="#f4f2ed"/>
+<g fill="none" stroke="#9d9990" stroke-width="1.1" stroke-linecap="round">
+  <rect x="100" y="250" width="150" height="120"/><rect x="330" y="250" width="150" height="120"/><rect x="560" y="250" width="150" height="120"/>
+  <path d="M250 310 H330"/><path d="M480 310 H560"/>
+  <path d="M175 250 V208 H635 V250"/>
+</g>
+<g fill="#171717"><circle cx="175" cy="310" r="7"/><circle cx="405" cy="310" r="7"/><circle cx="635" cy="310" r="7"/></g>
+<g fill="#77726a" font-family="DM Sans,Arial" font-size="13" text-anchor="middle" letter-spacing="1.2">
+  <text x="175" y="425">DISCOVER</text><text x="405" y="425">CHOOSE</text><text x="635" y="425">FULFILL</text>
+</g>
+<g fill="#252420" font-family="Instrument Serif,Georgia" font-size="34">
+  <text x="790" y="270">One dependable</text><text x="790" y="312">user journey.</text>
+</g>
+<path d="M790 350 H982" stroke="#6c7b72" stroke-width="1"/>
+<text x="790" y="400" fill="#77726a" font-family="DM Sans,Arial" font-size="15">Separate systems become</text>
+<text x="790" y="424" fill="#77726a" font-family="DM Sans,Arial" font-size="15">one experience.</text>
+</svg>

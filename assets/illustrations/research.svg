@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 720"><style>
+svg > g, svg > path, svg > text {
+  opacity: 0;
+  animation: archiveAppear .75s cubic-bezier(.22,1,.36,1) forwards;
+}
+svg > g:nth-of-type(1), svg > path:nth-of-type(1) { animation-delay: .12s; }
+svg > g:nth-of-type(2), svg > path:nth-of-type(2) { animation-delay: .28s; }
+svg > g:nth-of-type(3), svg > path:nth-of-type(3) { animation-delay: .44s; }
+svg > g:nth-of-type(n+4), svg > path:nth-of-type(n+4), svg > text { animation-delay: .62s; }
+g path, g line, g ellipse, g polyline, g polygon {
+  stroke-dasharray: 1800;
+  stroke-dashoffset: 1800;
+  animation: archiveDraw 2s cubic-bezier(.22,1,.36,1) .14s forwards;
+}
+@keyframes archiveDraw { to { stroke-dashoffset: 0; } }
+@keyframes archiveAppear { to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  svg > g, svg > path, svg > text { opacity: 1; animation: none; }
+  g path, g line, g ellipse, g polyline, g polygon {
+    stroke-dashoffset: 0;
+    animation: none;
+  }
+}
+</style><rect width="1100" height="720" fill="#ece9e1"/><path d="M80 475 C250 390 340 510 500 370 S770 190 1000 285" fill="none" stroke="#aaa69d" stroke-width="1.2" /><path d="M100 540 C300 460 445 610 610 450 S860 250 1020 355" fill="none" stroke="#aaa69d" stroke-width="1.2" /><path d="M210 420 L430 355 L620 420 L790 270" fill="none" stroke="#6c7b72" stroke-width="1.2" /><circle cx="210" cy="420" r="7" fill="#171717"/><circle cx="430" cy="355" r="5" fill="#171717"/><circle cx="620" cy="420" r="8" fill="#171717"/><circle cx="790" cy="270" r="6" fill="#171717"/><circle cx="790" cy="270" r="54" fill="none" stroke="#171717" opacity=".35"/><path d="M790 270 L945 150" stroke="#6c7b72" stroke-width="1.2" stroke-dasharray="2 14"/><circle cx="965" cy="135" r="5" fill="#6c7b72"/></svg>

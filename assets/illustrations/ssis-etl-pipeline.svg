@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 720"><style>
+svg > g, svg > path, svg > text {
+  opacity: 0;
+  animation: archiveAppear .75s cubic-bezier(.22,1,.36,1) forwards;
+}
+svg > g:nth-of-type(1), svg > path:nth-of-type(1) { animation-delay: .12s; }
+svg > g:nth-of-type(2), svg > path:nth-of-type(2) { animation-delay: .28s; }
+svg > g:nth-of-type(3), svg > path:nth-of-type(3) { animation-delay: .44s; }
+svg > g:nth-of-type(n+4), svg > path:nth-of-type(n+4), svg > text { animation-delay: .62s; }
+g path, g line, g ellipse, g polyline, g polygon {
+  stroke-dasharray: 1800;
+  stroke-dashoffset: 1800;
+  animation: archiveDraw 2s cubic-bezier(.22,1,.36,1) .14s forwards;
+}
+@keyframes archiveDraw { to { stroke-dashoffset: 0; } }
+@keyframes archiveAppear { to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  svg > g, svg > path, svg > text { opacity: 1; animation: none; }
+  g path, g line, g ellipse, g polyline, g polygon {
+    stroke-dashoffset: 0;
+    animation: none;
+  }
+}
+</style><rect width="1100" height="720" fill="#f4f2ed"/>
+<g fill="none" stroke="#9d9990" stroke-width="1.1" stroke-linecap="round">
+  <rect x="100" y="270" width="155" height="110"/><rect x="340" y="270" width="155" height="110"/><rect x="580" y="270" width="155" height="110"/>
+  <path d="M255 325 H340"/><path d="M495 325 H580"/>
+</g>
+<g fill="#171717"><circle cx="178" cy="325" r="7"/><circle cx="418" cy="325" r="7"/><circle cx="658" cy="325" r="7"/></g>
+<g fill="#77726a" font-family="DM Sans,Arial" font-size="13" text-anchor="middle" letter-spacing="1.2">
+  <text x="178" y="430">RAW</text><text x="418" y="430">TRANSFORM</text><text x="658" y="430">RELIABLE</text>
+</g>
+<g fill="#252420" font-family="Instrument Serif,Georgia" font-size="34">
+  <text x="805" y="278">Reliability begins</text><text x="805" y="320">before reporting.</text>
+</g>
+<path d="M805 358 H1010" stroke="#6c7b72" stroke-width="1"/>
+<text x="805" y="406" fill="#77726a" font-family="DM Sans,Arial" font-size="15">Validation and routing turn</text>
+<text x="805" y="430" fill="#77726a" font-family="DM Sans,Arial" font-size="15">movement into trustworthy data.</text>
+</svg>

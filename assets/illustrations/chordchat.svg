@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 720"><style>
+svg > g, svg > path, svg > text {
+  opacity: 0;
+  animation: archiveAppear .75s cubic-bezier(.22,1,.36,1) forwards;
+}
+svg > g:nth-of-type(1), svg > path:nth-of-type(1) { animation-delay: .12s; }
+svg > g:nth-of-type(2), svg > path:nth-of-type(2) { animation-delay: .28s; }
+svg > g:nth-of-type(3), svg > path:nth-of-type(3) { animation-delay: .44s; }
+svg > g:nth-of-type(n+4), svg > path:nth-of-type(n+4), svg > text { animation-delay: .62s; }
+g path, g line, g ellipse, g polyline, g polygon {
+  stroke-dasharray: 1800;
+  stroke-dashoffset: 1800;
+  animation: archiveDraw 2s cubic-bezier(.22,1,.36,1) .14s forwards;
+}
+@keyframes archiveDraw { to { stroke-dashoffset: 0; } }
+@keyframes archiveAppear { to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  svg > g, svg > path, svg > text { opacity: 1; animation: none; }
+  g path, g line, g ellipse, g polyline, g polygon {
+    stroke-dashoffset: 0;
+    animation: none;
+  }
+}
+</style><rect width="1100" height="720" fill="#f4f2ed"/>
+<g fill="none" stroke="#9d9990" stroke-width="1.1" stroke-linecap="round">
+  <path d="M150 185 C270 185 285 275 405 275"/>
+  <path d="M405 275 C525 275 540 365 660 365"/>
+  <path d="M660 365 C755 365 782 455 860 455"/>
+  <circle cx="150" cy="185" r="42"/><circle cx="405" cy="275" r="42"/><circle cx="660" cy="365" r="42"/><circle cx="860" cy="455" r="42"/>
+</g>
+<g fill="#171717"><circle cx="150" cy="185" r="6"/><circle cx="405" cy="275" r="6"/><circle cx="660" cy="365" r="6"/><circle cx="860" cy="455" r="6"/></g>
+<g fill="#77726a" font-family="DM Sans,Arial" font-size="13" text-anchor="middle" letter-spacing="1.2">
+  <text x="150" y="250">QUESTION</text><text x="405" y="340">REPLY</text><text x="660" y="430">DISCUSSION</text><text x="860" y="520">LEARNING</text>
+</g>
+<g fill="#252420" font-family="Instrument Serif,Georgia" font-size="34">
+  <text x="690" y="150">A question grows</text><text x="690" y="192">through conversation.</text>
+</g>
+</svg>
